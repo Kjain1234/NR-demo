@@ -10,17 +10,17 @@
 		top: 0;
 		width: 100%;
 		padding-block: 20px;
-		box-shadow: 0 10px 50px hsla(237, 71%, 52%, 0.2);
+		/* box-shadow: 0 10px 50px hsla(237, 71%, 52%, 0.2); */
 		animation: slideDown 0.25s ease-in-out forwards;
 	}
 @keyframes slideDown {
 		0% {
 			position: absolute;
-			background: var(--navy);
+			background: var(--raisin-black-1);
 		}
 		100% {
 			position: absolute;
-			background: var(--navy);
+			background: var(--raisin-black-1);
 		}
 	}
 
