@@ -1,0 +1,39 @@
+.header-bottom,
+.header.active .header-bottom {
+    position: absolute;
+    background: var(--navy);
+    bottom: auto;
+    top: 0;
+    width: 100%;
+    padding-block: 20px;
+    animation: slideDown 0.25s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+    0% {
+        position: absolute;
+        background: var(--raisin-black-1);
+    }
+
+    100% {
+        position: absolute;
+        background: var(--raisin-black-1);
+    }
+}
+
+.nakshatra-section{
+	padding-top: 10%;
+	padding-bottom: 1%;
+}
+
+.nakshatra-container{
+    max-width: 70%;
+    margin-inline: auto;
+}
+.location-link{
+    text-decoration: none;
+    text-decoration: underline;
+    cursor: pointer;
+    color: inherit
+}
+

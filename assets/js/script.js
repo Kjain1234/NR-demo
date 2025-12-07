@@ -192,9 +192,25 @@ if (popup && agreeBtn) {
 }
 
 function openNav() {
-	document.getElementById("mySidenav").style.width = "25%";
+	// document.getElementById("mySidenav").style.width = "25%";
+	document.getElementById("mySidenav").classList.add("open");
 }
 
 function closeNav() {
-	document.getElementById("mySidenav").style.width = "0";
+	// document.getElementById("mySidenav").style.width = "0";
+	document.getElementById("mySidenav").classList.remove("open");
+
 }
+
+const toggleBtn = document.querySelector(".about-toggle");
+const moreText = document.querySelector(".more-text");
+
+toggleBtn.addEventListener("click", () => {
+  if (moreText.classList.contains("hidden")) {
+    moreText.classList.remove("hidden");
+    toggleBtn.textContent = "Read less";
+  } else {
+    moreText.classList.add("hidden");
+    toggleBtn.textContent = "Read more";
+  }
+});
