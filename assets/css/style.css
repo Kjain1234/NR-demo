@@ -3064,6 +3064,7 @@ section,
 }
 
 .main-image {
+	padding-top: 0.5%;
 	flex: 2;
 	position: relative;
 }
