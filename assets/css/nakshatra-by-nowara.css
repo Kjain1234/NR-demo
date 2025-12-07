@@ -36,4 +36,7 @@
     cursor: pointer;
     color: inherit
 }
+.slide{
+    animation: fadeIn 1s ease-in-out;
+}
 

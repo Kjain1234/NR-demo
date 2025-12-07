@@ -21,3 +21,19 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+// interval of 4 seconds. query all slides and then if it contains hidden class, remove it and if it doesn't contain hidden class, add it.
+setInterval(() => {
+  const slides = document.querySelectorAll(".slide");
+  let activeslideIndex = -1;
+    slides.forEach(slide => {
+        if(slide.classList.contains("hidden") === false){
+            activeslideIndex = Array.from(slides).indexOf(slide);
+        }
+    });
+    if(activeslideIndex !== -1){
+        slides[activeslideIndex].classList.add("hidden");
+        let nextSlideIndex = (activeslideIndex + 1) % slides.length;
+        slides[nextSlideIndex].classList.remove("hidden");
+    }
+}, 4000);
