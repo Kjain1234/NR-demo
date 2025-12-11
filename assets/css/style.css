@@ -2557,7 +2557,7 @@ textarea.input-field {
 	text-transform: var(--text-transform, capitalize);
 
 	position: fixed;
-	top: 150px;
+	top: 180px;
 	right: 0px;
 	padding: 8px;
 	cursor: pointer;
@@ -2573,7 +2573,7 @@ textarea.input-field {
 
 .popup-form {
 	position: fixed;
-	top: 189px;
+	top: 219px;
 	right: -100%;
 	width: 250px;
 	height: auto;
@@ -3050,6 +3050,7 @@ section,
 	top: 0;
 	width: 35%;
 	padding: 5%;
+	padding-top: 2%;
 }
 
 
@@ -3124,7 +3125,7 @@ section,
 }
 
 .project-navigation-menu-section{
-	top:15%;
+	top:11%;
 }
 .project-navigation-menu li {
 	margin: 0 20px;
