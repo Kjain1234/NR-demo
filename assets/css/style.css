@@ -374,7 +374,13 @@ a {
 	/* border-bottom: 2px solid var(--gold); */
 	/* padding-bottom: 10px; */
 }
-
+.container-top{
+	display: flex;
+}
+.bars-icon-container{
+	margin-top: 10%;
+	padding-right: 20%;
+}
 .header-top .container,
 .header-top-list {
 	display: flex;
@@ -510,7 +516,9 @@ a {
 .navbar-link:is(:hover, :focus) {
 	color: var(--gold);
 }
-
+video,img {
+  pointer-events: none;
+}
 .overlay {
 	position: fixed;
 	inset: 0;
