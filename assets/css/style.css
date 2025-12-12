@@ -877,13 +877,14 @@ video,img {
 	padding-block: var(--section-padding);
 }
 
+.master-service-list,
 .service-list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 30px;
 }
-
+.master-service-card,
 .service-card {
 	position: relative;
 	background: var(--white);
@@ -891,7 +892,7 @@ video,img {
 	padding: 30px 10px;
 	box-shadow: var(--shadow-2);
 }
-
+.master-service-card .card-icon,
 .service-card .card-icon {
 	width: max-content;
 	margin-inline: auto;
@@ -906,14 +907,22 @@ video,img {
 	/* Ensures the image covers the area without distortion */
 }
 
+.master-card-icon img{
+	width: 100%;
+	max-width: 900px;
+	height: auto;
+	margin: auto;
+}
+
+.master-service-card .card-title,
 .service-card .card-title {
 	margin-bottom: 15px;
 }
-
+.master-service-card .card-title>a:is(:hover, :focus),
 .service-card .card-title>a:is(:hover, :focus) {
 	color: var(--gold);
 }
-
+.master-service-card .card-text,
 .service-card .card-text {
 	color: var(--cadet);
 	font-size: var(--fs-5);
@@ -921,6 +930,7 @@ video,img {
 	margin-bottom: 25px;
 }
 
+.master-service-card .card-link,
 .service-card .card-link {
 	color: var(--opal);
 	font-size: var(--fs-5);
@@ -931,10 +941,12 @@ video,img {
 	gap: 5px;
 }
 
+.master-service-card:is(:hover, :focus) .card-link,
 .service-card:is(:hover, :focus) .card-link {
 	color: var(--gold);
 }
 
+.master-service-card::after,
 .service-card::after {
 	content: "";
 	position: absolute;
@@ -946,6 +958,7 @@ video,img {
 	transition: var(--transition);
 }
 
+.master-service-card:is(:hover, :focus)::after,
 .service-card:is(:hover, :focus)::after {
 	width: 100%;
 }
@@ -1810,6 +1823,9 @@ textarea.input-field {
 	.service-list>li {
 		width: calc(50% - 15px);
 	}
+	.master-service-list>li {
+		width: 100%;
+	}
 
 	/**
    * PROPERTY
@@ -2306,6 +2322,9 @@ textarea.input-field {
 
 	.service-list>li {
 		width: calc(33.33% - 20px);
+	}
+	.master-service-list{
+		width: 100%;
 	}
 
 	/**
@@ -3140,16 +3159,13 @@ section,
   justify-content: center;
   background: #fff;
   border-bottom: 2px solid #eee;
-  padding: 12px 0;
+  padding: 25px 0;
   margin: 0;
   position: sticky;           /* stays at top */
   top: 0;
   z-index: 9000;
 }
 
-.project-navigation-menu-section{
-	top:11%;
-}
 .project-navigation-menu li {
 	margin: 0 20px;
 }
