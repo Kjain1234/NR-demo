@@ -1,6 +1,9 @@
-.section-careers {
+.section-careers{
 	background-color: var(--alice-blue);
 	padding-top: 10%;
+}
+.faq{
+	padding-top: 6%;
 }
 
 .header-bottom,
