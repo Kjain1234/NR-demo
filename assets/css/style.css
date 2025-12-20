@@ -3233,3 +3233,37 @@ section,
 .project-about-read-more-toggle-btn:hover {
   background-color: #005fa3;
 }
+
+/* Preloader covers the whole page */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff; /* or dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;                /* start fully visible */
+  transition: opacity 0.5s ease; /* smooth fade */
+}
+/* Blink animation */
+#preloader img {
+  width: 30%;
+  animation: blink 1s infinite; /* repeat forever */
+}
+
+@keyframes blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+#preloader.fade-out {
+  opacity: 0;                /* fade to invisible */
+  transition: opacity 0.5s ease;
+  pointer-events: none;      /* prevent blocking clicks */
+}

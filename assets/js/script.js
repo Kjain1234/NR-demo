@@ -90,6 +90,16 @@ document.addEventListener("DOMContentLoaded", () => {
  * auto scroll aminities section
  */
 window.addEventListener("load", () => {
+	const preloader = document.getElementById("preloader");
+
+  // Add fade-out class
+  preloader.classList.add("fade-out");
+
+  // Wait for transition to finish, then hide completely
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 500); // match the CSS transition duration
+
 	const aminitiesList = document.querySelector(".aminities-list");
 	if (!aminitiesList) return;
 
@@ -112,6 +122,7 @@ window.addEventListener("load", () => {
 			aminitiesList.scrollLeft = 0;
 		}
 	});
+
 });
 
 /**
