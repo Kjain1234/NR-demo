@@ -5,7 +5,7 @@ const navLinks = document.querySelectorAll(".project-navigation-menu a");
 window.addEventListener("scroll", () => {
   let current = "";
 
-  sections.forEach(section => {
+  sections.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
 
@@ -14,7 +14,7 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  navLinks.forEach(link => {
+  navLinks.forEach((link) => {
     link.classList.remove("active");
     if (link.getAttribute("href") === "#" + current) {
       link.classList.add("active");
@@ -26,14 +26,27 @@ window.addEventListener("scroll", () => {
 setInterval(() => {
   const slides = document.querySelectorAll(".slide");
   let activeslideIndex = -1;
-    slides.forEach(slide => {
-        if(slide.classList.contains("hidden") === false){
-            activeslideIndex = Array.from(slides).indexOf(slide);
-        }
-    });
-    if(activeslideIndex !== -1){
-        slides[activeslideIndex].classList.add("hidden");
-        let nextSlideIndex = (activeslideIndex + 1) % slides.length;
-        slides[nextSlideIndex].classList.remove("hidden");
+  slides.forEach((slide) => {
+    if (slide.classList.contains("hidden") === false) {
+      activeslideIndex = Array.from(slides).indexOf(slide);
     }
+  });
+  if (activeslideIndex !== -1) {
+    slides[activeslideIndex].classList.add("hidden");
+    let nextSlideIndex = (activeslideIndex + 1) % slides.length;
+    slides[nextSlideIndex].classList.remove("hidden");
+  }
 }, 4000);
+
+function openOverlay(divElement) {
+  let innerDiv = divElement.querySelector("div");
+  let imgElement = innerDiv.querySelector("img");
+  const overlay = document.querySelector("#zoomed-img-overlay");
+  const overlayImg = document.querySelector("#zoomed-img");
+  overlay.style.display = "flex"; // show overlay
+  overlayImg.src = imgElement.src; // set clicked image
+}
+
+function closeOverlay() {
+  document.querySelector("#zoomed-img-overlay").style.display = "none";
+}

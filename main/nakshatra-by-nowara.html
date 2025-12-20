@@ -32,7 +32,9 @@
 <body>
 
     <button class="floating-btn">How may I help you !!!</button>
-
+    <div id="zoomed-img-overlay" class="zoomed-img-overlay" onclick="closeOverlay()">
+        <img id="zoomed-img" class="zoomed-img" src="" alt="Zoomed Image">
+    </div>
 
     <div class="popup-form" id="enq">
         <button class="close-btn">&times;</button>
@@ -206,16 +208,24 @@
                 </div>
             </section>
             <section class="project-navigation-menu-section">
-                <ul class="project-navigation-menu">
-                    <li><a href="#about" class="active">About</a></li>
-                    <li><a href="#amenities">Amenities</a></li>
-                    <!-- <li><a href="#luxury">Address of Luxury</a></li> -->
-                    <li><a href="#layout">Master Layout</a></li>
-                    <li><a href="#map">Location</a></li>
-                </ul>
-                <br>
-                <br>
-                <br>
+                <div>
+                    <div class="scrolling-container">
+                        <div class="scrolling-text">
+                            <img class="gold-coin" src="../assets/images/money.png" /> Gold* coin on Every Retail Shop!
+                            *TC
+                            Apply
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <ul class="project-navigation-menu">
+                        <li><a href="#about" class="active">About</a></li>
+                        <li><a href="#amenities">Amenities</a></li>
+                        <!-- <li><a href="#luxury">Address of Luxury</a></li> -->
+                        <li><a href="#layout">Master Layout</a></li>
+                        <li><a href="#map">Location</a></li>
+                    </ul>
+                </div>
 
             </section>
             <section class="page-width-container" aria-label="about" id="about">
@@ -240,8 +250,6 @@
                         </p>
                         <a class="location-link about-toggle">Read more</a>
                     </div>
-
-
 
                 </div>
             </section>
@@ -327,45 +335,105 @@
             </section>
             <section class="service" aria-label="layout" id="layout">
                 <div class="container">
-                    <h1>Master Plans</h1>
-                    <br>
-                    <br>
-                    <ul class="master-service-list">
-                        <li>
-                            <div class="master-service-card">
-
-                                <div class="master-card-icon">
-                                    <img src="../assets/images/floor-plans/SITE PLAN-1.jpg"
-                                        alt="Master Plan">
-                                </div>
-
-                                <h3 class="h3 card-title">
-                                    <a>Master Plan</a>
-                                </h3>
-
-                                <a class="card-link">
-                                    <!-- <span> 2 Bedroom , 2 Bathroom , 558 sqft</span> -->
-                                </a>
-
-                            </div>
-                        </li>
-
-                        
-                    </ul>
-
-                </div>
-            </section>
-            <section class="service" aria-label="layout" id="layout">
-                <div class="container">
                     <h1>Floor Plans</h1>
                     <br>
                     <br>
                     <ul class="service-list">
                         <li>
-                            <div class="service-card">
+                            <div class="service-card" onclick="openOverlay(this)">
 
                                 <div class="card-icon">
-                                    <img src="../assets/images/floor-plans/Approved floor plans/2BHK TYPE 2.jpg"
+                                    <img src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 2.jpg"
+                                        alt="2BHK-image">
+                                </div>
+
+                                <h3 class="h3 card-title">
+                                    <a>2 BHK</a>
+                                </h3>
+
+                                <a class="card-link">
+                                    <span> 2 Bedroom , 2 Bathroom , 558 sqft</span>
+                                </a>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="service-card" onclick="openOverlay(this)">
+
+                                <div class="card-icon">
+                                    <img src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 2P.jpg"
+                                        alt="2BHK-image">
+                                </div>
+
+                                <h3 class="h3 card-title">
+                                    <a>2 BHK</a>
+                                </h3>
+
+                                <a class="card-link">
+                                    <span> 2 Bedroom , 2 Bathroom , 558 sqft</span>
+                                </a>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="service-card" onclick="openOverlay(this)">
+
+                                <div class="card-icon">
+                                    <img src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 3.jpg"
+                                        alt="2BHK-image">
+                                </div>
+
+                                <h3 class="h3 card-title">
+                                    <a>2 BHK</a>
+                                </h3>
+
+                                <a class="card-link">
+                                    <span> 2 Bedroom , 2 Bathroom , 558 sqft</span>
+                                </a>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="service-card" onclick="openOverlay(this)">
+
+                                <div class="card-icon">
+                                    <img src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 3P.jpg"
+                                        alt="2BHK-image">
+                                </div>
+
+                                <h3 class="h3 card-title">
+                                    <a>2 BHK</a>
+                                </h3>
+
+                                <a class="card-link">
+                                    <span> 2 Bedroom , 2 Bathroom , 558 sqft</span>
+                                </a>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="service-card" onclick="openOverlay(this)">
+
+                                <div class="card-icon">
+                                    <img src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 5.jpg"
+                                        alt="2BHK-image">
+                                </div>
+
+                                <h3 class="h3 card-title">
+                                    <a>2 BHK</a>
+                                </h3>
+
+                                <a class="card-link">
+                                    <span> 2 Bedroom , 2 Bathroom , 558 sqft</span>
+                                </a>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="service-card" onclick="openOverlay(this)">
+
+                                <div class="card-icon">
+                                    <img src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 5P.jpg"
                                         alt="2BHK-image">
                                 </div>
 
@@ -381,10 +449,28 @@
                         </li>
 
                         <li>
-                            <div class="service-card">
+                            <div class="service-card" onclick="openOverlay(this)">
 
                                 <div class="card-icon">
-                                    <img src="../assets/images/floor-plans/Approved floor plans/3BHK TYPE 1.jpg"
+                                    <img src="../assets/images/floor-plans/Approved floor plans/3BHK/3BHK TYPE 1.jpg"
+                                        alt="3BHK-image">
+                                </div>
+
+                                <h3 class="h3 card-title">
+                                    <a>3 BHK</a>
+                                </h3>
+
+                                <a class="card-link">
+                                    <span> 3 Bedroom , 2 Bathroom , 645 sqft</span>
+                                </a>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="service-card" onclick="openOverlay(this)">
+
+                                <div class="card-icon">
+                                    <img src="../assets/images/floor-plans/Approved floor plans/3BHK/3BHK TYPE 1P.jpg"
                                         alt="3BHK-image">
                                 </div>
 
