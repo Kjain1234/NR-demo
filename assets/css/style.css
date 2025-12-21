@@ -24,8 +24,8 @@
 	--seashell: hsl(8, 100%, 97%);
 	--cadet: hsl(200, 15%, 43%);
 	--white: hsl(0, 0%, 100%);
-	--white-1: hsl(0, 0%, 100%);
-	--white-2: hsl(0, 14%, 98%);
+	--white-1: hsl(0, 14%, 99%);
+	--white-2: hsl(0, 14%, 97%);
 	--black: hsl(0, 0%, 0%);
 	--opal: hsl(180, 20%, 62%);
 
@@ -3035,13 +3035,13 @@ section,
 	height: 100%;
 	width: 0;
 	position: fixed;
-	z-index: 1;
+	z-index: 9999;
 	top: 0;
 	left: 0;
 	overflow-x: hidden;
 	transition: 0.5s;
 	padding-top: 2%;
-	background-color: var(--white);
+	background-color: var(--white-1);
 }
 
 .sidenav a {
