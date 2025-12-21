@@ -92,13 +92,12 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("load", () => {
 	const preloader = document.getElementById("preloader");
 
-  // Add fade-out class
-  preloader.classList.add("fade-out");
+	// Add fade-out class
+	preloader.classList.add("fade-out");
 
-  // Wait for transition to finish, then hide completely
-  setTimeout(() => {
-    preloader.style.display = "none";
-  }, 500); // match the CSS transition duration
+	setTimeout(() => {
+		preloader.style.display = "none";
+	}, 500);
 
 	const aminitiesList = document.querySelector(".aminities-list");
 	if (!aminitiesList) return;
@@ -217,11 +216,11 @@ const toggleBtn = document.querySelector(".about-toggle");
 const moreText = document.querySelector(".more-text");
 
 toggleBtn.addEventListener("click", () => {
-  if (moreText.classList.contains("hidden")) {
-    moreText.classList.remove("hidden");
-    toggleBtn.textContent = "Read less";
-  } else {
-    moreText.classList.add("hidden");
-    toggleBtn.textContent = "Read more";
-  }
+	if (moreText.classList.contains("hidden")) {
+		moreText.classList.remove("hidden");
+		toggleBtn.textContent = "Read less";
+	} else {
+		moreText.classList.add("hidden");
+		toggleBtn.textContent = "Read more";
+	}
 });

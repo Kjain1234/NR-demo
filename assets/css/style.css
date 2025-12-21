@@ -2604,7 +2604,7 @@ textarea.input-field {
 	padding: 8px;
 	cursor: pointer;
 	transition: background-color 0.3s ease, transform 0.3s ease;
-	z-index: 9999;
+	z-index: 9998;
 }
 
 .floating-btn:is(:hover, :focus) {
@@ -3251,13 +3251,13 @@ section,
 }
 /* Blink animation */
 #preloader img {
-  width: 30%;
-  animation: blink 1s infinite; /* repeat forever */
+  height: 30%;
+  animation: blink 1s infinite;
 }
 
 @keyframes blink {
   0%   { opacity: 1; }
-  50%  { opacity: 0; }
+  70%  { opacity: 0.2; }
   100% { opacity: 1; }
 }
 

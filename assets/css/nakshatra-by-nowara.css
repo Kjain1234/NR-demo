@@ -51,7 +51,7 @@
 
 /* The actual text element being animated */
 .scrolling-text {
-    display: inline-block;
+    display: inline-flex;
     padding-left: 100%;
     animation: scroll-left 10s linear infinite;
 }
