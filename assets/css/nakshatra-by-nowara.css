@@ -53,7 +53,7 @@
 .scrolling-text {
     display: inline-flex;
     padding-left: 100%;
-    animation: scroll-left 10s linear infinite;
+    animation: scroll-left 20s linear infinite;
 }
 
 /* Keyframes define the movement path */
