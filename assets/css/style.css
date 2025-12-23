@@ -364,6 +364,7 @@ a {
 	justify-content: flex-end;
 	flex-wrap: wrap;
 	gap: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 .contact-header a {
@@ -2609,7 +2610,8 @@ textarea.input-field {
 	text-transform: var(--text-transform, capitalize);
 
 	position: fixed;
-	top: 180px;
+	/* top: 180px; */
+	top: 9rem;
 	right: 0px;
 	padding: 8px;
 	cursor: pointer;
@@ -2625,7 +2627,7 @@ textarea.input-field {
 
 .popup-form {
 	position: fixed;
-	top: 219px;
+	top: 11.5rem;
 	right: -100%;
 	width: 250px;
 	height: auto;
@@ -2839,8 +2841,8 @@ section,
 }
 
 .faq {
-	margin-top: 50px;
-	margin-bottom: 100px;
+	margin-top: 11.5rem;
+	margin-bottom: 5rem;
 }
 
 .faq-container {
