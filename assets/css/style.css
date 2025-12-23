@@ -360,10 +360,15 @@ a {
 	width: 100%;
 	text-align: right;
 	color: var(--white);
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 0.5rem;
 }
 
 .contact-header a {
-	display: inline;
+	/* display: inline; */
+	/* display: block; */
 	color: var(--white);
 }
 
@@ -579,8 +584,13 @@ video,img {
 .hero-content {
 	z-index: 1;
 	align-items: center;
-	margin-top: 40%;
+	margin-top: 13rem;
 }
+.hero .container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+	}
 
 .hero-subtitle {
 	display: flex;
@@ -3024,6 +3034,9 @@ section,
 .urban-development-vision {
 	display: flex;
 	justify-content: center;
+}
+.urban-development-vision-img{
+	width: 100%;
 }
 
 .fa-bars {
