@@ -22,8 +22,8 @@
 }
 
 .nakshatra-section {
-    padding-top: 9%;
-    padding-bottom: 1%;
+    padding-top: 9rem;
+    padding-bottom: 1rem;
 }
 
 .nakshatra-container {
@@ -110,4 +110,96 @@
     max-height: 90%;
     border: 3px solid white;
     border-radius: 8px;
+}
+
+/* Media Query */
+@media (min-width: 150px) {    
+    .nakshatra-section {
+        padding-top: 11rem;
+    }
+    .project-images-section{
+        flex-direction: column;
+    }
+    .side-images{
+        flex-direction: row;
+    }
+    .side-image{
+        width: 50%;
+    }
+}
+
+/**
+ * responsive for larger than 600px screen
+ */
+
+@media (min-width: 600px) {
+    .nakshatra-section {
+        padding-top: 9rem;
+    }
+    .project-images-section{
+        flex-direction: column;
+    }
+    .side-images{
+        flex-direction: row;
+    }
+    .side-image{
+        width: 50%;
+    }
+}
+
+/**
+ * responsive for larger than 768px screen
+ */
+
+@media (min-width: 768px) {
+    .nakshatra-section {
+        padding-top: 9rem;
+    }
+    .project-images-section{
+        flex-direction: row;
+    }
+    .side-images{
+        flex-direction: column;
+    }
+    .side-image{
+        width: 100%;
+    }
+}
+
+/**
+ * responsive for larger than 992px screen
+ */
+
+@media (min-width: 992px) {
+    .nakshatra-section {
+        padding-top: 9rem;
+    }
+    .project-images-section{
+        flex-direction: row;
+    }
+    .side-images{
+        flex-direction: column;
+    }
+    .side-image{
+        width: 100%;
+    }
+}
+
+/**
+ * responsive for larger than 1200px screen
+ */
+
+@media (min-width: 1200px) {
+    .nakshatra-section {
+        padding-top: 9rem;
+    }
+    .project-images-section{
+        flex-direction: row;
+    }
+    .side-images{
+        flex-direction: column;
+    }
+    .side-image{
+        width: 100%;
+    }
 }

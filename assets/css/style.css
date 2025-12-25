@@ -2792,7 +2792,7 @@ section,
 	border-radius: 50px;
 	text-align: center;
 	font-size: 20px;
-	z-index: 100;
+	z-index: 9001;
 }
 
 .whatsapp-icon {
@@ -3133,6 +3133,7 @@ section,
 .page-width-container {
 	max-width: 1350px;
 	margin: auto;
+	padding:0.2rem;
 }
 
 .project-images-section {
@@ -3180,8 +3181,8 @@ section,
 
 .project-image-label {
 	position: absolute;
-	bottom: 1%;
-	left: 1%;
+	bottom: 0.5rem;
+	left: 0.5rem;
 	background-color: rgba(0, 0, 0, 0.6);
 	color: #fff;
 	padding: 6px 12px;
@@ -3197,7 +3198,7 @@ section,
 	justify-content: center;
 	background: #fff;
 	border-bottom: 2px solid #eee;
-	padding: 15px 0;
+	padding: 15px 0.2rem;
 	margin: 0;
 	position: sticky;
 	/* stays at top */
