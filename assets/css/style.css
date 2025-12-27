@@ -179,6 +179,9 @@ body {
 .max-width-80{
     max-width: 80%;
 }
+.width-80{
+    width: 80%;
+}
 .width-90{
     width: 90%;
 }
