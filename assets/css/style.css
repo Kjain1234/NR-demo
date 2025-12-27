@@ -176,7 +176,12 @@ body {
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
-
+.max-width-80{
+    max-width: 80%;
+}
+.width-90{
+    width: 90%;
+}
 .container {
 	padding-inline: 15px;
 }
@@ -3134,6 +3139,10 @@ section,
 	max-width: 1350px;
 	margin: auto;
 	padding:0.2rem;
+}
+.page-width-container-footer{
+	max-width: 1350px;
+	margin: auto;
 }
 
 .project-images-section {

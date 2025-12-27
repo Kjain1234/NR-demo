@@ -1,6 +1,6 @@
 .header-bottom,
 .header.active .header-bottom {
-    position: absolute;
+    position: relative;
     background: var(--navy);
     bottom: auto;
     top: 0;
