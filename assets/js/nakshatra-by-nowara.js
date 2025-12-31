@@ -95,13 +95,13 @@ function closeBrochureOverlay() {
   document.querySelector("#brochure-overlay").style.display = "none";
 }
 
-const popupScriptURL = "brochure.php";
+const brochureScriptURL = "../brochure.php";
 const brochurePopupForm = document.getElementById("brochure-form");
 brochurePopupForm.addEventListener("submit", (e) => {
   e.preventDefault();
   downloadBrochure();
 
-  fetch(popupScriptURL, { method: "POST", body: new FormData(brochurePopupForm) })
+  fetch(brochureScriptURL, { method: "POST", body: new FormData(brochurePopupForm) })
   	.then((response) => response.text())
   	.then((data) => {
   		brochurePopupForm.reset();

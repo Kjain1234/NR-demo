@@ -1,4 +1,4 @@
-const popupScriptURL = "enquire.php";
+const popupScriptURL = "../enquire.php";
 
 const enquiryPopupForm = document.getElementById("popup-form");
 const enquiryPopupFormAlert = document.getElementById("popupAlert");
