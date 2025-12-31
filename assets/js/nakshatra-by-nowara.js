@@ -102,9 +102,57 @@ brochurePopupForm.addEventListener("submit", (e) => {
   downloadBrochure();
 
   fetch(brochureScriptURL, { method: "POST", body: new FormData(brochurePopupForm) })
-  	.then((response) => response.text())
-  	.then((data) => {
-  		brochurePopupForm.reset();
-  	})
-  	.catch((error) => console.error("Error!", error.message));
+    .then((response) => response.text())
+    .then((data) => {
+      brochurePopupForm.reset();
+    })
+    .catch((error) => console.error("Error!", error.message));
 });
+
+
+window.onload = function initMap() {
+  // Coordinates for your two offices
+  var office1 = { lat: 28.403883510870727, lng: 76.99640950323717 }; // Example: Panipat
+  var office2 = { lat: 28.457147465010387, lng: 76.81848665581106 }; // Example: Delhi
+
+  // Create the map centered around the first office
+  var map = new google.maps.Map(document.getElementById("map-container"), {
+    zoom: 8,
+    center: office1
+  });
+
+  // Add markers
+  var marker1 = new google.maps.Marker({
+    position: office1,
+    map: map,
+    title: "Nowara Realty Office"
+  });
+
+  var marker2 = new google.maps.Marker({
+    position: office2,
+    map: map,
+    title: "Nakshatra by Nowara"
+  });
+
+  // Optional: Fit map bounds to show both markers nicely
+  var bounds = new google.maps.LatLngBounds();
+  bounds.extend(office1);
+  bounds.extend(office2);
+  map.fitBounds(bounds);
+
+  // Marker 1 click → directions to Office 1
+  google.maps.event.addListener(marker1, 'click', function () {
+    window.open(
+      `https://www.google.com/maps/dir/?api=1&destination=${office1.lat},${office1.lng}`,
+      '_blank'
+    );
+  });
+
+  // Marker 2 click → directions to Office 2
+  google.maps.event.addListener(marker2, 'click', function () {
+    window.open(
+      `https://www.google.com/maps/dir/?api=1&destination=${office2.lat},${office2.lng}`,
+      '_blank'
+    );
+  });
+}
