@@ -125,13 +125,25 @@ window.onload = function initMap() {
   var marker1 = new google.maps.Marker({
     position: office1,
     map: map,
-    title: "Nowara Realty Office"
+    title: "Nowara Realty Office",
+    label: {
+      text: "Nowara Realty Office",
+      color: "black",
+      fontSize: "14px",
+      fontWeight: "bold"
+    }
   });
 
   var marker2 = new google.maps.Marker({
     position: office2,
     map: map,
-    title: "Nakshatra by Nowara"
+    title: "Nakshatra by Nowara",
+    label: {
+      text: "Nakshatra by Nowara",
+      color: "black",
+      fontSize: "14px",
+      fontWeight: "bold"
+    }
   });
 
   // Optional: Fit map bounds to show both markers nicely
