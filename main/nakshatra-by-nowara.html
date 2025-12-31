@@ -30,19 +30,22 @@
 </head>
 
 <body>
-
+    <div id="popupAlert">
+        Your response has been submitted. We will get back to you soon.
+    </div>
     <div id="preloader">
         <img loading="lazy" src="../assets/images/favicon-white.jpg" alt="Loading..." />
     </div>
     <button class="floating-btn">How may I help you !!!</button>
-    <div id="zoomed-img-overlay" class="zoomed-img-overlay" onclick="closeOverlay()">
+    <div id="zoomed-img-overlay" class="zoomed-img-overlay cursor-zoomed" onclick="closeOverlay()">
         <img loading="lazy" id="zoomed-img" class="zoomed-img" src="" alt="Zoomed Image">
     </div>
 
     <div class="popup-form" id="enq">
         <button class="close-btn">&times;</button>
         </br>
-        <div class="enquiry-image"><img loading="lazy" src="../assets/images/nowara logo white.jpg" alt="Nowara logo" width="150px">
+        <div class="enquiry-image"><img loading="lazy" src="../assets/images/nowara logo white.jpg" alt="Nowara logo"
+                width="150px">
         </div>
         </br>
         <form id="popup-form" name="popup-form">
@@ -64,6 +67,37 @@
 
             <button type="submit" value="Submit" id="popup-form-submit">Submit</button>
         </form>
+    </div>
+    <div class="brochure-overlay" id="brochure-overlay">
+        <div class="brochure-box">
+            <button class="brochure-close-btn" onclick="closeBrochureOverlay()">&times;</button>
+            <div class="brochure-image"><img loading="lazy" src="../assets/images/nowara logo white.jpg"
+                    alt="Nowara logo" width="150px"> </div>
+            <h2 class="brochure-title">Download Brochure</h2>
+            <form id="brochure-form" name="brochure-form" class="brochure-form">
+                <div class="input-group">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" id="brochure-name" name="brochure-name" placeholder="Name" required>
+                </div>
+
+                <div class="input-group">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <input type="tel" pattern="[0-9]{10}" id="brochure-phone" name="brochure-phone" placeholder="Phone"
+                        title="Enter only 10 digit phone number" required>
+                </div>
+
+                <div class="input-group">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" id="brochure-email" name="brochure-email" placeholder="Email" required>
+                </div>
+                <input type="text" id="brochure-category" name="brochure-category" style="display: none;">
+
+
+                <button class="brochure-overlay-btn" type="submit" value="Submit"
+                    id="brochure-form-submit">Download</button>
+            </form>
+        </div>
+
     </div>
 
     <!-- 
@@ -137,7 +171,8 @@
         <div>
             <div><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> </br></br></div>
             <div>
-                <a href="../index.html"><img loading="lazy" class="sidebar-logo" src="../assets/images/nowara logo white.jpg" alt="Nowara logo"></a>
+                <a href="../index.html"><img loading="lazy" class="sidebar-logo"
+                        src="../assets/images/nowara logo white.jpg" alt="Nowara logo"></a>
             </div>
             <div>
                 <div class="sidebar-div"><a href="../main/nakshatra-by-nowara.html">Projects</a></div>
@@ -161,8 +196,8 @@
             <section class="project-images-section page-width-container width-90" aria-label="about">
                 <div class="main-image">
                     <div class="slideshow">
-                        <div data-slide="1" class="slide"><img loading="lazy" src="../assets/images/Piyush Jain Housing_Aerial Cam.webp"
-                                alt="A4"></div>
+                        <div data-slide="1" class="slide"><img loading="lazy"
+                                src="../assets/images/Piyush Jain Housing_Aerial Cam.webp" alt="A4"></div>
                         <div data-slide="2" class="slide hidden"><img
                                 src="../assets/images/Piyush Jain Housing_Commercial 2 View.webp" alt="A4"></div>
                         <div data-slide="3" class="slide hidden"><img
@@ -194,7 +229,8 @@
                 <div>
                     <div class="scrolling-container">
                         <div class="scrolling-text">
-                            <span style="font-size: 1.5rem;"><img loading="lazy" class="gold-coin" src="../assets/images/money.webp" /> Get Free Gold coin on Every Retail Shop!</span>
+                            <span style="font-size: 1.5rem;"><img loading="lazy" class="gold-coin"
+                                    src="../assets/images/money.webp" /> Get Free Gold coin on Every Retail Shop!</span>
                             <span style="font-size: 0.5rem;"> *TC Apply</span>
                         </div>
                     </div>
@@ -240,7 +276,8 @@
                 <div class="project-amenities-container">
                     <h1>Building Amenities</h1>
                     <div class="aminities-carousel">
-                        <img loading="lazy" src="../assets/images/project-features.png" alt="project-features" class="w-100">
+                        <img loading="lazy" src="../assets/images/project-features.png" alt="project-features"
+                            class="w-100">
                     </div>
 
                     <div class="aminities-carousel">
@@ -259,7 +296,8 @@
                             <li>
                                 <div class="aminities-card">
                                     <figure class="aminities-card-banner">
-                                        <img loading="lazy" src="../assets/images/building-amenities/Badminton Court.webp"
+                                        <img loading="lazy"
+                                            src="../assets/images/building-amenities/Badminton Court.webp"
                                             alt="Badminton Court" class="w-100">
                                     </figure>
                                     <div class="aminities-content">
@@ -281,8 +319,8 @@
                             <li>
                                 <div class="aminities-card">
                                     <figure class="aminities-card-banner">
-                                        <img loading="lazy" src="../assets/images/building-amenities/Gymnasium.webp" alt="Gymnasium"
-                                            class="w-100">
+                                        <img loading="lazy" src="../assets/images/building-amenities/Gymnasium.webp"
+                                            alt="Gymnasium" class="w-100">
                                     </figure>
                                     <div class="aminities-content">
                                         <h3 class="h3 aminities-title"><a href="#">Gymnasium</a></h3>
@@ -292,7 +330,8 @@
                             <li>
                                 <div class="aminities-card">
                                     <figure class="aminities-card-banner">
-                                        <img loading="lazy" src="../assets/images/building-amenities/Yoga & Meditation.webp"
+                                        <img loading="lazy"
+                                            src="../assets/images/building-amenities/Yoga & Meditation.webp"
                                             alt="Yoga & Meditation" class="w-100">
                                     </figure>
                                     <div class="aminities-content">
@@ -316,8 +355,8 @@
                 </div>
             </section>
             <section class="service page-width-container width-90" aria-label="layout" id="layout">
+                <h1>Floor Plans</h1>
                 <div class="container">
-                    <h1>Floor Plans</h1>
                     <br>
                     <br>
                     <ul class="service-list">
@@ -325,7 +364,8 @@
                             <div class="service-card" onclick="openOverlay(this)">
 
                                 <div class="card-icon">
-                                    <img loading="lazy" src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 2.webp"
+                                    <img loading="lazy"
+                                        src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 2.webp"
                                         alt="2 BHK TYPE 2">
                                 </div>
 
@@ -343,7 +383,8 @@
                             <div class="service-card" onclick="openOverlay(this)">
 
                                 <div class="card-icon">
-                                    <img loading="lazy" src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 2P.webp"
+                                    <img loading="lazy"
+                                        src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 2P.webp"
                                         alt="2 BHK TYPE 2P">
                                 </div>
 
@@ -361,7 +402,8 @@
                             <div class="service-card" onclick="openOverlay(this)">
 
                                 <div class="card-icon">
-                                    <img loading="lazy" src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 3.webp"
+                                    <img loading="lazy"
+                                        src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 3.webp"
                                         alt="2 BHK TYPE 3">
                                 </div>
 
@@ -379,7 +421,8 @@
                             <div class="service-card" onclick="openOverlay(this)">
 
                                 <div class="card-icon">
-                                    <img loading="lazy" src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 3P.webp"
+                                    <img loading="lazy"
+                                        src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 3P.webp"
                                         alt="2 BHK TYPE 3P">
                                 </div>
 
@@ -397,7 +440,8 @@
                             <div class="service-card" onclick="openOverlay(this)">
 
                                 <div class="card-icon">
-                                    <img loading="lazy" src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 4.webp"
+                                    <img loading="lazy"
+                                        src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 4.webp"
                                         alt="2 BHK TYPE 4">
                                 </div>
 
@@ -415,7 +459,8 @@
                             <div class="service-card" onclick="openOverlay(this)">
 
                                 <div class="card-icon">
-                                    <img loading="lazy" src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 5.webp"
+                                    <img loading="lazy"
+                                        src="../assets/images/floor-plans/Approved floor plans/2BHK/2BHK TYPE 5.webp"
                                         alt="2 BHK TYPE 5">
                                 </div>
 
@@ -434,7 +479,8 @@
                             <div class="service-card" onclick="openOverlay(this)">
 
                                 <div class="card-icon">
-                                    <img loading="lazy" src="../assets/images/floor-plans/Approved floor plans/3BHK/3BHK TYPE 1.webp"
+                                    <img loading="lazy"
+                                        src="../assets/images/floor-plans/Approved floor plans/3BHK/3BHK TYPE 1.webp"
                                         alt="3 BHK TYPE 1">
                                 </div>
 
@@ -480,6 +526,17 @@
 
                 </div>
             </section>
+            <section class="page-width-container width-90" aria-label="brochure" id="brochure">
+                <div class="project-about-container">
+                    <h1>Brochure</h1>
+                    <div class="brochure-container">
+                        <button class="brochure-btn" onclick="openBrochureOverlay('Residential')"> Residential Brochure
+                        </button>
+                        <button class="brochure-btn" onclick="openBrochureOverlay('Commercial')"> Commercial Brochure
+                        </button>
+                    </div>
+                </div>
+            </section>
         </article>
     </main>
 
@@ -513,19 +570,22 @@
                         </li>
 
                         <li>
-                            <a href="../main/about-us.html" class="footer-link">About Us</a>
+                            <a href="#" class="footer-link" data-btnname="About Us" data-page="about-us"
+                                data-section="">About Us</a>
                         </li>
 
                         <li>
-                            <a href="../#map" class="footer-link">Location Map</a>
+                            <a href="#" class="footer-link" data-btnname="Location Map" data-page="nakshatra-by-nowara"
+                                data-section="map">Location Map</a>
                         </li>
 
                         <li>
-                            <a href="../main/faq.html" class="footer-link">FAQ</a>
+                            <a href="#" class="footer-link" data-btnname="FAQ" data-page="faq" data-section="">FAQ</a>
                         </li>
 
                         <li>
-                            <a href="../#contactus" class="footer-link">Contact Us</a>
+                            <a href="#" class="footer-link" data-btnname="Contact Us" data-page=""
+                                data-section="">Contact Us</a>
                         </li>
 
                     </ul>
@@ -648,6 +708,7 @@
   -->
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/nakshatra-by-nowara.js"></script>
+    <script src="../assets/js/enquire.js"></script>
 
     <!-- 
     - ionicon link

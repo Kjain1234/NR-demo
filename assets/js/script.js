@@ -168,6 +168,36 @@ if (faqItems.length > 0) {
 }
 
 /**
+ * Footer eventListeners
+ */
+document.querySelectorAll(".footer-link").forEach((link) => {
+	link.addEventListener("click", (e) => {
+		e.preventDefault();
+		const page = link.getAttribute("data-page");
+		const section = link.getAttribute("data-section");
+		let url = "";
+		if (page && section && page.trim() !== "" && section.trim() !== "") {
+			if (page === "about-us" || page === "faq" || page === "nakshatra-by-nowara") {
+				url = `../main/${page}.html#${section}`;
+			} else if (page === "index") {
+				url = `../#${section}`;
+			}
+		} else if (page && page.trim() !== "") {
+			if (page === "about-us" || page === "faq") {
+				url = `../main/${page}.html`;
+			} else if (page === "index") {
+				url = `../${page}.html`;
+			}
+		} else if (section && section.trim() !== "") {
+			url = `../#${section}`;
+		}
+		console.log('url => ',url);
+		window.location.href = url;
+	})
+
+});
+
+/**
  * consent popup
  */
 const popup = document.getElementById("popup");
@@ -215,7 +245,7 @@ function closeNav() {
 const toggleBtn = document.querySelector(".about-toggle");
 const moreText = document.querySelector(".more-text");
 
-toggleBtn.addEventListener("click", () => {
+toggleBtn?.addEventListener("click", () => {
 	if (moreText.classList.contains("hidden")) {
 		moreText.classList.remove("hidden");
 		toggleBtn.textContent = "Read less";

@@ -86,8 +86,12 @@
 .card-icon {
     cursor: zoom-in;
 }
+.cursor-zoomed {
+    cursor: zoom-out;
+}
 
 /* Overlay styling */
+.brochure-overlay,
 .zoomed-img-overlay {
     position: fixed;
     /* covers entire viewport */
@@ -102,7 +106,6 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    cursor: zoom-out;
 }
 
 .zoomed-img {
@@ -110,6 +113,85 @@
     max-height: 90%;
     border: 3px solid white;
     border-radius: 8px;
+}
+.brochure-image {
+	display: flex;
+	margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.brochure-container{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+}
+.brochure-btn {
+	width: 50%;
+	padding: 1rem;
+	background: var(--gold);
+	color: var(--black);
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 16px;
+	text-align: center;
+}
+.brochure-overlay-btn{
+    display: block;
+    text-align: center;
+	padding: 0.8rem;
+	background: var(--gold);
+	color: var(--black);
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 16px;
+    border-radius: 5px;
+
+}
+.brochure-overlay-btn:hover,
+.brochure-btn:hover {
+	background: var(--navy);
+	color: var(--white);
+	border-color: var(--navy);
+}
+.brochure-box{
+    position: relative;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.brochure-form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.brochure-form div{
+    margin-bottom: 1rem;
+}
+.input-group input{
+    width: 100%;
+}
+
+.brochure-close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: var(--black);
+    cursor: pointer;
+}
+.brochure-title{
+    margin-bottom: 1rem;
+    font-size: 24px;
+    color: var(--navy);
 }
 
 /* Media Query */

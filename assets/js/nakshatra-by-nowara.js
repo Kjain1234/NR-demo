@@ -1,6 +1,7 @@
 // Scroll spy functionality
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".project-navigation-menu a");
+const brochureName = "";
 
 window.addEventListener("scroll", () => {
   let current = "";
@@ -50,3 +51,60 @@ function openOverlay(divElement) {
 function closeOverlay() {
   document.querySelector("#zoomed-img-overlay").style.display = "none";
 }
+function openBrochureOverlay(brochureNameSelector) {
+  const overlay = document.querySelector("#brochure-overlay");
+  overlay.style.display = "flex"; // show overlay
+  console.log(brochureNameSelector);
+  document.querySelector("#brochure-category").value = brochureNameSelector;
+  this.brochureName = brochureNameSelector;
+}
+function downloadBrochure() {
+  if (this.brochureName) {
+    console.log(this.brochureName);
+    if (this.brochureName == "Residential") {
+      downloadPDF(
+        "../assets/images/Brochure/Nakshatra/Residnetial_Brochure_Nakshatra.pdf",
+        "Residnetial_Brochure_Nakshatra.pdf",
+      );
+    } else {
+      downloadPDF(
+        "../assets/images/Brochure/Nakshatra/Commercial_Brochure_Nakshatra.pdf",
+        "Commercial_Brochure_Nakshatra.pdf",
+      );
+    }
+    closeBrochureOverlay();
+  }
+}
+function downloadPDF(pdfPath, fileName) {
+  fetch(pdfPath) // your PDF path
+    .then((response) => response.blob())
+    .then((blob) => {
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = fileName; // force download name
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url); // cleanup
+    })
+    .catch((err) => console.error("Download error:", err));
+}
+
+function closeBrochureOverlay() {
+  document.querySelector("#brochure-overlay").style.display = "none";
+}
+
+const popupScriptURL = "brochure.php";
+const brochurePopupForm = document.getElementById("brochure-form");
+brochurePopupForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  downloadBrochure();
+
+  fetch(popupScriptURL, { method: "POST", body: new FormData(brochurePopupForm) })
+  	.then((response) => response.text())
+  	.then((data) => {
+  		brochurePopupForm.reset();
+  	})
+  	.catch((error) => console.error("Error!", error.message));
+});
