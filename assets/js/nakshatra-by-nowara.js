@@ -170,7 +170,7 @@ window.onload = function initMap() {
 }
 */
 window.onload = function initleafletMap() {
-  var map = L.map('map-container').setView([28.4038, 76.9800], 11);
+  var map = L.map('map-container').setView([28.4038, 76.9800], 10);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     // attribution: '© OpenStreetMap contributors'
