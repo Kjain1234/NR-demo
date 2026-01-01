@@ -109,7 +109,7 @@ brochurePopupForm.addEventListener("submit", (e) => {
     .catch((error) => console.error("Error!", error.message));
 });
 
-
+/*
 window.onload = function initMap() {
   // Coordinates for your two offices
   var office1 = { lat: 28.403883510870727, lng: 76.99640950323717 }; // Example: Panipat
@@ -166,5 +166,33 @@ window.onload = function initMap() {
       `https://www.google.com/maps/dir/?api=1&destination=${office2.lat},${office2.lng}`,
       '_blank'
     );
+  });
+}
+*/
+window.onload = function initleafletMap() {
+  var map = L.map('map-container').setView([28.4038, 76.9800], 11);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    // attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Office 1 marker
+  var marker1 = L.marker([28.403883510870727, 76.99640950323717],{icon: L.divIcon({
+    html: "<div style='color:black; font-weight:bold;'><img src='https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png' alt='Nowara Realty Office' height='40'> Nowara Realty Office</div>",
+  })
+}).addTo(map).bindPopup("Nowara Realty Office");
+  marker1.on('click', function() {
+    // window.open("https://www.google.com/maps/search/?api=1&query=28.403883510870727,76.99640950323717", "_blank");
+    window.open("https://maps.app.goo.gl/u4THYit8Xdkn4nhGA", "_blank");
+  });
+
+  // Office 2 marker
+  var marker2 = L.marker([28.4571288,76.8154556],{icon: L.divIcon({
+    html: "<div style='color:black; font-weight:bold;'><img src='https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png' alt='Nakshatra by Nowara' height='40'> Nakshatra by Nowara</div>",
+  })
+}).addTo(map).bindPopup("Nakshatra by Nowara");
+  marker2.on('click', function() {
+    // window.open("https://www.google.com/maps/search/?api=1&query=28.4571288,76.8154556", "_blank");
+    window.open("https://maps.app.goo.gl/iNUsP4KFuJGjVvjM7?g_st=aw", "_blank");
   });
 }

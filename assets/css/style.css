@@ -1452,6 +1452,7 @@ img {
 	.map-left,
 	.map-right {
 		max-width: 100%;
+		width: 100%;
 	}
 
 	.map-left .h2 {
