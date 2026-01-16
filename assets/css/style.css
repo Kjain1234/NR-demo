@@ -3238,12 +3238,16 @@ section,
 	position: relative;
 	padding-bottom: 5px;
 }
-
-.project-navigation-menu a:hover,
-.project-navigation-menu a.active {
-	font-weight: bold;
-	color: #0077cc;
+@media (hover: hover) {
+	.project-navigation-menu a:hover {
+		font-weight: bold;
+		color: #0077cc;
+	}
 }
+.project-navigation-menu a.active {
+		font-weight: bold;
+		color: #0077cc;
+	}
 
 .project-navigation-menu a.active::after {
 	content: "";

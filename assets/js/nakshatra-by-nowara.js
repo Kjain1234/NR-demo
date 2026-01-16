@@ -7,13 +7,18 @@ window.addEventListener("scroll", () => {
   let current = "";
 
   sections.forEach((section) => {
+    
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
 
-    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+    // if (pageYOffset >= sectionTop - sectionHeight / 3) {
+    //   current = section.getAttribute("aria-label");
+    // }
+    if (pageYOffset >= sectionTop-200) {
       current = section.getAttribute("aria-label");
     }
   });
+  
 
   navLinks.forEach((link) => {
     link.classList.remove("active");
