@@ -3219,6 +3219,7 @@ section,
 	/* stays at top */
 	top: 0;
 	z-index: 9000;
+	flex-wrap: wrap;
 }
 
 .project-navigation-menu-section {
