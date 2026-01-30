@@ -1,0 +1,178 @@
+.header-bottom,
+.header.active .header-bottom {
+    position: sticky;
+    background: var(--navy);
+    bottom: auto;
+    top: 0;
+    width: 100%;
+    padding-block: 20px;
+    /* box-shadow: 0 10px 50px hsla(237, 71%, 52%, 0.2); */
+    animation: slideDown 0.25s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+    0% {
+        position: sticky;
+        background: var(--raisin-black-1);
+    }
+
+    100% {
+        position: sticky;
+        background: var(--raisin-black-1);
+    }
+}
+h1 {
+	text-align: center;
+	color: var(--prussian-blue);
+}
+
+
+.news-container {
+    margin-inline: auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    
+    margin-top: 10rem;
+}
+
+.news-section-text {
+    text-align: center;
+    margin-bottom: 20px;
+
+    /* color: var(--raisin-black-1); */
+}
+
+
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Flexbox Container */
+.news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive Logic: 3 Columns */
+.news-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Calculate width for 3 columns minus the gaps */
+    flex: 1 1 calc(33.333% - 25px);
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image Styling */
+.news-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    /* Ensures images aren't stretched */
+    display: block;
+}
+
+/* Text Content Area */
+.news-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Makes the content fill the card */
+}
+
+.news-header {
+    font-size: 1.25rem;
+    margin: 0 0 10px 0;
+    color: #1a1a1a;
+}
+
+.news-details {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    /* Pushes the button to the bottom */
+}
+
+/* Button Styling */
+.read-more {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 2px solid #007bff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.read-more:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+.zoomed-img-overlay {
+    position: fixed;
+    /* covers entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    /* semi-transparent background */
+    display: none;
+    /* hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.zoomed-img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 3px solid white;
+    border-radius: 8px;
+}
+.cursor-zoomed {
+    cursor: zoom-out;
+}
+.cursor-zoom-in {
+    cursor: zoom-in;
+}
+
+/* --- Responsive Breakpoints --- */
+
+/* Tablet View: 2 Columns */
+@media (max-width: 992px) {
+    .news-card {
+        flex: 1 1 calc(50% - 25px);
+    }
+}
+
+/* Mobile View: 1 Column */
+@media (max-width: 600px) {
+    .news-card {
+        flex: 1 1 100%;
+    }
+
+    body {
+        padding: 20px 10px;
+    }
+}
