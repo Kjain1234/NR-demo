@@ -185,6 +185,9 @@ body {
 .width-90 {
 	width: 90%;
 }
+.display-inline{
+	display: inline;
+}
 .container {
 	padding-inline: 15px;
 }
@@ -585,7 +588,6 @@ img {
 \*-----------------------------------*/
 
 .hero {
-	/* background-image: url("../images/Main view Night for whole Site.jpg"); */
 	padding-block: var(--section-padding);
 	background-size: cover;
 	background-position: center;

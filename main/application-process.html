@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nowara - We Create Your World</title>
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="../assets/images/favicon.webp" type="image/svg+xml" />
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/application-process.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div id="popupAlert">
+        Your response has been submitted. We will get back to you soon.
+    </div>
+    <div id="preloader">
+        <img src="../assets/images/favicon-white.webp" alt="Loading..." />
+    </div>
+    <button class="floating-btn">How may I help you !!!</button>
+
+    <div class="popup-form" id="enq">
+        <button class="close-btn">&times;</button>
+        </br>
+        <div class="enquiry-image"><img src="../assets/images/nowara logo white.webp" alt="Nowara logo" width="150px">
+        </div>
+        </br>
+        <form id="popup-form" name="popup-form">
+            <div class="input-group">
+                <ion-icon name="person-outline"></ion-icon>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+
+            <div class="input-group">
+                <ion-icon name="call-outline"></ion-icon>
+                <input type="tel" pattern="[0-9]{10}" id="phone" name="phone" placeholder="Phone"
+                    title="Enter only 10 digit phone number" required>
+            </div>
+
+            <div class="input-group">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+
+            <button type="submit" value="Submit" id="popup-form-submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header" data-header>
+        <div class="overlay" data-overlay></div>
+        <div class="header-bottom">
+            <div class="contact-header">
+                <a href="tel:9311994230"><i class="fa fa-phone"></i> +91-9311994230</a> | <a
+                    href="mailto:info@nowararealty.com"> <i class="fa fa-envelope"></i> info@nowararealty.com</a>
+            </div>
+            <div class="container">
+                <div class="container-top">
+                    <div class="bars-icon-container">
+                        <i class=" fa fa-solid fa-bars fa-lg bars-icon" onclick="openNav()"></i>
+                    </div>
+                    <div>
+                        <a href="../#top" class="logo "> <img src="../assets/images/nowara_logo-t.webp"
+                                alt="Nowara logo">
+                        </a>
+                    </div>
+
+                </div>
+
+                <nav class="navbar" data-navbar>
+
+                    <div class="navbar-top">
+
+                        <a href="../#top" class="logo"> <img src="../assets/images/nowara logo white.webp"
+                                alt="Nowara logo"> </a>
+
+                        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </button>
+
+                    </div>
+
+                    <div class="navbar-bottom">
+                        <ul class="navbar-list">
+
+                            <li>
+                                <a href="../#top" class="navbar-link" data-nav-link>Home</a>
+                            </li>
+
+                            <li>
+                                <a href="../main/nakshatra-by-nowara.html" class="navbar-link"
+                                    data-nav-link>Projects</a>
+                            </li>
+
+                            <li>
+                                <a href="../#map" class="navbar-link" data-nav-link>Connect with us</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </nav>
+
+                <div class="header-bottom-actions">
+
+                    <!-- <button class="header-bottom-actions-btn" data-nav-open-btn aria-label="Open Menu">
+						<ion-icon name="menu-outline"></ion-icon>
+					</button> -->
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="mySidenav" class="sidenav">
+        <div>
+            <div><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> </br></br></div>
+            <div>
+                <a href="../index.html"><img class="sidebar-logo" src="../assets/images/nowara logo white.webp"
+                        alt="Nowara logo"></a>
+            </div>
+            <div>
+                <div class="sidebar-div"><a href="../main/nakshatra-by-nowara.html">Projects</a></div>
+                <div class="sidebar-div"><a href="../main/about-us.html">About us</a></div>
+                <div class="sidebar-div"><a href="../main/careers.html">Career</a></div>
+                <div class="sidebar-div"><a href="../main/news.html">News and Media</a></div>
+                <div class="sidebar-div"><a href="../main/application-process.html">Application Process</a></div>
+                <div class="sidebar-div"><a href="#">Blogs</a></div>
+                <div class="sidebar-div"><a href="../#map">Connect with us</a></div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <article>
+            <section class="section-careers">
+                <div class="container">
+                    <div class="registration-container ">
+                        <h1 class="page-title">User Registration</h1>
+
+                        <div class="application-grid">
+
+                            <div class="application-card">
+                                <div class="application-content">
+                                    <h2 class="application-header">Documents required for User Registration </h2>
+                                    <table class="application-details-table">
+                                        <tr>
+                                            <td>Email</td>
+                                            <td>Mobile Phone</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Aadhar card</td>
+                                            <td>Pan Card</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Digilocker Account</td>
+                                            <td>Passport Size Photo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bank Account Details</td>
+                                        </tr>
+                                    </table>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="application-card">
+                                <img src="../assets/images/Application-Process/User-Registration-Step1.webp" alt="Application Step 1" class="application-image">
+                                <div class="application-content">
+                                    <h2 class="application-header">Login Details </h2>
+                                    <ul class="application-details-ul">
+                                        <li>Go to <a class="display-inline" href="https://edraw.tcpharyana.gov.in" target="_blank">https://edraw.tcpharyana.gov.in</a></li>
+                                        <li>Click on 'User Registration'</li>
+                                        <li>Enter your Email and Mobile number and verify them uisng OTP</li>
+                                        <li>After verification, you will be asked to create a password for your account</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="application-card">
+                                <img src="../assets/images/Application-Process/User-Registration-Step2.webp" alt="Application Step 2" class="application-image">
+                                <div class="application-content">
+                                    <h2 class="application-header">Applicant Profile </h2>
+                                    <ul class="application-details-ul">
+                                        <li> Now you have to start your e-KYC process</li>
+                                        <li>In this step, you will be required to veriify your Aadhar Card, PAN Card and Bank Details</li>
+                                        <li>Click on 'Start e-KYC' and follow the instructions</li>
+                                        <li>You will need to enter your Aadhar number and verify it using OTP</li>
+                                        <li>You will need to verify your Aadhar Card using your Digilocker account as well</li>
+                                        <li>So enter your Digilocker credentials and verify your documents</li>
+                                    </ul>
+                                    <p class="application-details">
+                                        <b>NOTE: Please ensure to refresh your Digilocker Aadhar and PAN documents before starting the e-KYC process</b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="application-card">
+                                <img src="../assets/images/Application-Process/User-Registration-Step3.webp" alt="Application Step 3" class="application-image">
+                                <div class="application-content">
+                                    <h2 class="application-header">PAN Verification </h2>
+                                    <ul class="application-details-ul">
+                                        <li> After Digilocker verification, you will be asked to verify your Aadhar and PAN Card via Digio </li>
+                                        <li>Check both Issued Documents and click on "Allow" button</li>
+                                        <li>Enter PAN Card details, click on "Fetch Document"</li>
+                                        <li>Enter your Bank Account No. and IFSC Code. Click on "Submit"</li>
+                                        <li>Now all of your documents are submitted for e-KYC Approval.</li>
+                                        <li>Page will refresh automatically. After some time, your verified account will be ready to use</li>
+                                    </ul>
+                                    <p class="application-details">
+                                        <b>NOTE: Verification might take some time to be completed. You can check on later as well by login into your account on the login page.</b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="application-card">
+                                <img src="../assets/images/Application-Process/User-Registration-Step4.webp" alt="Application Step 4" class="application-image">
+                                <div class="application-content">
+                                    <h2 class="application-header">Applicant's Address </h2>
+                                    <ul class="application-details-ul">
+                                        <li>After e-KYC is completed, you will be asked to enter your permanent address details.</li>
+                                        <li>Enter all the required details, and check the "I agree to the terms and conditions" checkbox.</li>
+                                        <li>Click on "Register" button to complete your application process.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="application-card">
+                                <img src="../assets/images/Application-Process/User-Registration-Step5.webp" alt="Application Step 5" class="application-image">
+                                <div class="application-content">
+                                    <h2 class="application-header">Supporting Documents </h2>
+                                    <ul class="application-details-ul">
+                                        <li>Now you will be redirected to upload the image of Aadhar Card and PAN Card. </li>
+                                        <li>Also you have to upload your passport size photo. </li>
+                                        <li>Now Click on "Complete Profile Registration" Button.</li>
+                                        <li>Your profile has been registered successfully now.</li>
+                                    </ul>
+                                    <p class="application-details">
+                                        <b>NOTE: All of the documents are required to upload.</b>
+                                    </p>
+                                </div>
+                            </div>
+
+                            
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="application-container ">
+                        <h1 class="page-title">Application Process</h1>
+                        
+
+                        <div class="application-grid">
+                            <div class="application-card">
+                                <div class="application-content">
+                                    <h2 class="application-header">Documents required for application </h2>
+                                    <table class="application-details-table">
+                                        
+                                        <tr>
+                                            <td>Aadhar card</td>
+                                            <td>Pan Card</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Passport Size Photo</td>
+                                            <td>Affidavit</td>
+                                        </tr>
+                                    </table>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="application-card">
+                                <img src="../assets/images/Application-Process/Application-Process-Step1.webp" alt="Login Page" class="application-image">
+                                <div class="application-content">
+                                    <h2 class="application-header">Login Details </h2>
+                                    <ul class="application-details-ul">
+                                        <li>Go to <a class="display-inline" href="https://edraw.tcpharyana.gov.in" target="_blank">https://edraw.tcpharyana.gov.in</a></li>
+                                        <li>Click on "Login"</li>
+                                        <li>Enter your Email and Password to login.</li>
+                                        <li>Enter OTP for Verification</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="application-card">
+                                <img src="../assets/images/Application-Process/Application-Process-Step2.webp" alt="Projects List and Application" class="application-image">
+                                <div class="application-content">
+                                    <h2 class="application-header">Projects List and Application </h2>
+                                    <ul class="application-details-ul">
+                                        <li>There on the Live Projects Tab, you will see "Nakshatra By Nowara" Project ID: 214 </li>
+                                        <li>Click on "Apply" Button and you will be redirected to project details where you have to choose the unit Category </li>
+                                        <li>Select your required unit and Click on "Submit".</li>
+                                        <li>On the next page you will be asked to fill your details. Add Second Applicant (if applicable) and Click on "Submit"</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="application-card">
+                                <img src="../assets/images/Application-Process/Application-Process-Step3.webp" alt="Application Details" class="application-image">
+                                <div class="application-content">
+                                    <h2 class="application-header">Application Details </h2>
+                                    <ul class="application-details-ul">
+                                        <li>On Category tab, enter your Category as "General Category" and click on "Submit".</li>
+                                        <li>On Documents tab, Upload your applicable Documents</li>
+                                        <li>On Registration Fees tab, Pay your Registration Fees.</li>
+                                        <li>On Application Fees tab, Pay your Application Fees.</li>
+                                        <li>On Final Submission tab, Verify all your details and submit your Application.</li>
+                                    </ul>
+                                    <p class="application-details">
+                                        <b>Supported Payment Methods:</b>
+                                        <ul class="application-details-ul">
+                                            <li>Net Banking</li>
+                                            <li>Debit/Credit Cards</li>
+                                            <li>UPI</li>
+                                            <li>Offline Challan</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="../assets/images/nowara_logo-t.webp" alt="Nowara logo" />
+                    </a>
+
+                    <p class="section-text">We Create Your World</p>
+                </div>
+
+                <div class="footer-link-box">
+                    <ul class="footer-list">
+                        <li>
+                            <p class="footer-list-title">Company</p>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link" data-btnname="About Us" data-page="about-us"
+                                data-section="">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link" data-btnname="Location Map" data-page="nakshatra-by-nowara"
+                                data-section="map">Location Map</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link" data-btnname="FAQ" data-page="faq" data-section="">FAQ</a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="footer-link" data-btnname="Contact Us" data-page=""
+                                data-section="">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer-list">
+                        <li>
+                            <p class="footer-list-title">Contact Us</p>
+                        </li>
+
+                        <ul class="contact-list">
+                            <li>
+                                <a href="#" class="contact-link">
+                                    <ion-icon name="location-outline"></ion-icon>
+
+                                    <address>
+                                        1615 Tower 1 ,<br />DLF Corporate Greens Sector 74 ,<br />Gurugram
+                                        , Haryana
+                                    </address>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="tel:01245181321" class="contact-link">
+                                    <ion-icon name="call-outline"></ion-icon>
+
+                                    <span>01245181321</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="mailto:info@nowararealty.com" class="contact-link">
+                                    <ion-icon name="mail-outline"></ion-icon>
+
+                                    <span>info@nowararealty.com</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </ul>
+
+                    <ul class="footer-list">
+                        <li>
+                            <p class="footer-list-title">Follow Us</p>
+                        </li>
+
+                        <ul class="social-list">
+                            <li>
+                                <a href="https://www.linkedin.com/company/nowararealty/" class="social-link"
+                                    target="_blank">
+                                    <ion-icon name="logo-linkedin"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.instagram.com/nowararealty/" class="social-link" target="_blank">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://wa.me/+919311994230" class="social-link" target="_blank">
+                                    <ion-icon name="logo-whatsapp"></ion-icon>
+                                </a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-last-info">
+                <br />
+                <p class="copyright">
+                    " Need more info? Reach out to our support team at
+                    <a href="mailto:info@nowararealty.com">info@nowararealty.com</a> or
+                    call us at <a href="tel:+01245181321">01245181321</a> ."
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">
+                    &copy; 2025 <a href="#">Nowara</a>. All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+    </a>
+
+    <a href="https://wa.me/+919311994230" class="whatsapp_float" target="_blank" rel="noopener noreferrer">
+        <i class="fa fa-whatsapp whatsapp-icon"></i>
+    </a>
+
+    <!-- 
+    - custom js link
+  -->
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/careers.js"></script>
+    <script src="../assets/js/enquire.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

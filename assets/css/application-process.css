@@ -1,0 +1,143 @@
+.header-bottom,
+.header.active .header-bottom {
+    position: sticky;
+    background: var(--navy);
+    bottom: auto;
+    top: 0;
+    width: 100%;
+    padding-block: 20px;
+    /* box-shadow: 0 10px 50px hsla(237, 71%, 52%, 0.2); */
+    animation: slideDown 0.25s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+    0% {
+        position: sticky;
+        background: var(--raisin-black-1);
+    }
+
+    100% {
+        position: sticky;
+        background: var(--raisin-black-1);
+    }
+}
+h1 {
+	text-align: center;
+	color: var(--prussian-blue);
+}
+
+
+.registration-container {
+    margin-inline: auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    margin-top: 10rem;
+}
+.application-container {
+    margin-inline: auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    margin-top: 2rem;
+}
+
+
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Flexbox Container */
+.application-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive Logic: 3 Columns */
+.application-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+    /* Calculate width for 3 columns minus the gaps */
+    flex: 1 1 calc(100% - 25px);
+    transition: transform 0.3s ease;
+}
+.application-card img {
+    border: 2px solid var(--prussian-blue);
+    
+}
+
+/* Image Styling */
+.application-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Text Content Area */
+.application-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.application-header {
+    font-size: 1.25rem;
+    margin: 0 0 10px 0;
+    color: #1a1a1a;
+}
+
+.application-details {
+    font-size: 18px;
+    color: var(--black);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.application-details-ul li{
+    list-style-type: disc;
+    font-size: 18px;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+.application-details-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+.application-details-table th,
+.application-details-table td{
+    padding: 0.5rem;
+    text-align: left;
+}
+
+
+/* --- Responsive Breakpoints --- */
+
+/* Tablet View: 2 Columns */
+@media (max-width: 992px) {
+    .application-card {
+        flex: 1 1 calc(50% - 25px);
+    }
+}
+
+/* Mobile View: 1 Column */
+@media (max-width: 600px) {
+    .application-card {
+        flex: 1 1 100%;
+    }
+
+    body {
+        padding: 20px 10px;
+    }
+}
